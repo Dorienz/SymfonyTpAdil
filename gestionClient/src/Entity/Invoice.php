@@ -54,7 +54,6 @@ class Invoice
     private $status;
 
     #[ORM\ManyToOne(targetEntity: Customer::class, inversedBy: 'invoices')]
-    #[Groups(['customer:all'])]
     public $customer;
 
     #[ORM\Column(type: 'integer')]
